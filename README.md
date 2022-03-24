@@ -1,4 +1,5 @@
 # react_for_study
+studied by myself with inflearn
 ## 1.basic
 jsx의 형태의 코드를 리턴해줘야한다.  
 jsx는 html이랑 비슷하지만 javascript로 변환된다.  
