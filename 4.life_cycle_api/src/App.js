@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import MyComponent from "./MyComponent";
 
 class App extends Component {
@@ -43,15 +43,12 @@ class App extends Component {
         return (
             // constructor: 컴포넌트가 처음 만들어질 때 호출되는 함수
             // 특정 DOM에 어떤 작업을 하고싶을 때 ref를 사용하는데 DOM에 id를 붙여주는것과 비슷
-            <Fragment>
-                <div ref={(ref) => (this.DivId = ref)}>
-                    {/* MyComponent에 값을 넘겨줌 */}
-                    {/* this.state.counter <10일 때만 보여라 */}
-                    {this.state.counter < 10 && <MyComponent value={this.state.counter} />}
-                    <button onClick={this.handleClick}>Click Me</button>
-                </div>
-                <div id="scroll-box"></div>
-            </Fragment>
+            <div ref={(ref) => (this.DivId = ref)}>
+                {/* MyComponent에 값을 넘겨줌 */}
+                {/* this.state.counter <10일 때만 보여라 */}
+                {this.state.counter < 10 && <MyComponent value={this.state.counter} />}
+                <button onClick={this.handleClick}>Click Me</button>
+            </div>
         );
     }
 }
