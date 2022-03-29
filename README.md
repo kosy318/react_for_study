@@ -126,4 +126,5 @@ props는 읽기 전용, state는 변경도 가능
 
 
 ## 5.input
-input을 사용하여 state 값을 바꾸는 
+input을 사용하여 state 값을 바꾸는 법
+
