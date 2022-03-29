@@ -123,3 +123,8 @@ props는 읽기 전용, state는 변경도 가능
 <b>컴포넌트에 에러 발생</b>
 
 - componentDidCatch: 에러 처리, 에러가 발생할 수 있는 component의 부모 component에서 처리를 해줘야함 => MyComponent.js(에러 만들어놓음)+App.js(에러처리)
+
+
+## 5.input
+input을 사용하여 state 값을 바꾸는 법
+
