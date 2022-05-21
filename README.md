@@ -128,3 +128,10 @@ props는 읽기 전용, state는 변경도 가능
 ## 5.input
 input을 사용하여 state 값을 바꾸는 법
 
+## 6. array
+자식 컴포넌트가 부모한테 값 전달하기<br>
+<App /> component 내부에서 handleCreate라는 메소드를 만들어 자식컴포넌트한테 Props로 전달<br>
+Props로 전달한 함수를 호출시켜서 data가 <App />에 들어가게끔 작성<br><br>
+
+
+
