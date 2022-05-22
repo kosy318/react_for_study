@@ -132,6 +132,9 @@ input을 사용하여 state 값을 바꾸는 법
 자식 컴포넌트가 부모한테 값 전달하기<br>
 <App /> component 내부에서 handleCreate라는 메소드를 만들어 자식컴포넌트한테 Props로 전달<br>
 Props로 전달한 함수를 호출시켜서 data가 <App />에 들어가게끔 작성<br><br>
-
-
+.setState로 변수에 값 setting<br>
+.concat을 사용해서 기존의 배열은 수정하지 않고 새로운 배열을 만들어서 그 배열에 데이터를 집어넣어서 그 배열을 기존의 배열 자리에 넣어줌(App.js)<br>
+id를 부여할 때, 굳이 state에 넣어줄 필요 없다. rendering용이 아님(App.js)<br>
+handleSubmit = (e) => {e.preventDefault();} : 페이지가 reloading되는 것을 방지(PhoneForm.js)<br>
+key: component를 여러개 렌더링 하게 될 때 고유 값을 정해줌으로써 업데이트 성능을 최적화(PhoneInfoList.js)<br>
 
