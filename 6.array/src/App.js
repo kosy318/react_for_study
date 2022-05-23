@@ -31,14 +31,45 @@ class App extends Component{
     })
   }
 
+  // 제거 기능 구현
+  handleRemove = (id) => {
+    const {information} = this.state;
+    this.setState({
+      information: information.filter(info => info.id !== id)
+    });
+  }
+
+  // 수정 기능 구현
+  handleUpdate = (id, data) => {
+    const {information} = this.state;
+    this.setState({
+      information: information.map(
+        info => {
+          // info의 id값고 parameter의 id값이 같으면
+          if(info.id === id){
+            return {
+              id,
+              ...data,
+            };
+          }
+          return info;
+        }
+      )
+    });
+  }
+
   render(){
     return(
       <div>
         <PhoneForm onCreate={this.handleCreate}/>
         {JSON.stringify(this.state.information)}
 
-        {/* information 값 전달 */}
-        <PhoneInfoList data={this.state.information}/>
+        {/* PhoneInfoList한테 information, handleRemove, handleUpdatae 전달 */}
+        <PhoneInfoList 
+          data={this.state.information}
+          onRemove={this.handleRemove}
+          onUpdate={this.handleUpdate}
+        />
       </div>
     );
   }
