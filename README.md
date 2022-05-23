@@ -136,5 +136,24 @@ Props로 전달한 함수를 호출시켜서 data가 <App />에 들어가게끔 
 .concat을 사용해서 기존의 배열은 수정하지 않고 새로운 배열을 만들어서 그 배열에 데이터를 집어넣어서 그 배열을 기존의 배열 자리에 넣어줌(App.js)<br>
 id를 부여할 때, 굳이 state에 넣어줄 필요 없다. rendering용이 아님(App.js)<br>
 handleSubmit = (e) => {e.preventDefault();} : 페이지가 reloading되는 것을 방지(PhoneForm.js)<br>
-key: component를 여러개 렌더링 하게 될 때 고유 값을 정해줌으로써 업데이트 성능을 최적화(PhoneInfoList.js)<br>
-
+key: component를 여러개 렌더링 하게 될 때 고유 값을 정해줌으로써 업데이트 성능을 최적화(PhoneInfoList.js)<br><br>
+const numbers = [1,2,3,4,5];<br>
+<br>
+numbers.slice(0,2); // [1,2]<br>
+numbers.slice(0,3); // [1,2,3]<br>
+numbers.slice(1,3); // [2,3]<br>
+numbers.slice(3,5); // [4,5]<br>
+<br>
+numbers.slice(0,2).concat(numbers.slice(3,5)) // [1,2,4,5]<br>
+<br>
+[<br>
+	...numbers.slice(0,2),<br>
+	10,<br>
+	...numbers.slice(3,5)<br>
+] // [1,2,10,4,5]<br>
+<br>
+numbers.filter(n => n>3); // [4, 5]<br>
+numbers.filter(n => n!== 3); // [1,2,4,5]<br>
+numbers; // [1,2,3,4,5]<br><br>
+삼항연산자 사용 가능(PhoneInfo.js)<br>
+제거, 수정기능 구현: 직접 보는것이 좋을듯(App.js)<br>
