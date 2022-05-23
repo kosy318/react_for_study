@@ -147,9 +147,9 @@ numbers.slice(3,5); // [4,5]<br>
 numbers.slice(0,2).concat(numbers.slice(3,5)) // [1,2,4,5]<br>
 <br>
 [<br>
-	...numbers.slice(0,2),<br>
-	10,<br>
-	...numbers.slice(3,5)<br>
+&emsp;...numbers.slice(0,2),<br>
+&emsp;10,<br>
+&emsp;...numbers.slice(3,5)<br>
 ] // [1,2,10,4,5]<br>
 <br>
 numbers.filter(n => n>3); // [4, 5]<br>
